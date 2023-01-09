@@ -1,0 +1,133 @@
+﻿@model OrderVM
+@{
+    ViewBag.Title = "ConfirmOrder";
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Gonderim Adresi
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextAreaFor(x => x.Order.ShippedAddress, new { @class = "form-control" })
+            </div>
+            <br />
+
+        </div> 
+       
+
+
+        <div style="padding-top:30px" class="form-group">
+            <label class="col-sm-2 control-label">
+                Kart Numarası
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.PaymentDTO.CardNumber, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <br />
+
+
+        </div>
+
+       
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Kart Güvenlik Numarası
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.PaymentDTO.SecurityNumber, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <br />
+        </div>
+
+
+      
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Gecerlilik süresi (Yıl)
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.PaymentDTO.CardExpiryYear, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <br />
+        </div>
+
+     
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Gecerlilik süresi (Ay)
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.PaymentDTO.CardExpiryMonth, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <br />
+        </div>
+
+  
+
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Kart Üzerindeki İsim
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.PaymentDTO.CardUserName, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <br />
+        </div>
+
+     
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Email
+
+            </label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(x => x.Order.Email, new { @class = "form-control" })
+            </div>
+
+            <br />
+            <br />
+        </div>
+
+  
+
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                Onaylamak icin tıklayınız
+
+            </label>
+            <div class="col-sm-10">
+                <button class="btn btn-primary">Onay</button>
+            </div>
+
+            <br />
+        </div>
+
+       
+    }
+</div>
+
